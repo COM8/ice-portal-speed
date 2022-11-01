@@ -36,6 +36,7 @@ def plot_speed(ax: Axes) -> None:
     ax.set_ylabel("Speed (km/h)")
     ax.set_xlabel("Time")
     ax.legend(loc='upper left')
+    ax.grid(axis="y")
 
 def animate(i, ax)  -> None:
     global timeList
