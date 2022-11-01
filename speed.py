@@ -28,7 +28,7 @@ def plot_speed(ax: Axes) -> None:
     ax.cla()
     ax.clear()
     ax.set_xticks(ax.get_xticks(), ax.get_xticklabels(), rotation = -90)
-    ax.xaxis.set_major_formatter(mdates.DateFormatter('%M:%S'))
+    ax.xaxis.set_major_formatter(mdates.DateFormatter('%H:%M:%S'))
     ax.xaxis.set_major_locator(mdates.SecondLocator(interval=10))
 
     ax.plot(timeList, speedList, linewidth=1.0, label=f'ICE (max: {round(max(speedList), 2)}, cur: {speedList[-1]})', color="red", marker="x")
